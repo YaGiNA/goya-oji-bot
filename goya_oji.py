@@ -1,5 +1,4 @@
 import os
-import configparser
 import discord
 import re
 
@@ -31,12 +30,8 @@ async def on_message(message):
 
 
 def get_key():
-    # get a discord's api key from conf file at ./env dir. 
-    conf = configparser.ConfigParser()
-    base = os.path.dirname(os.path.abspath(__file__))
-    conf_path = os.path.normpath(os.path.join(base, "./env/apikey.conf"))
-    conf.read(conf_path, "UTF-8")
-    key = conf.get("settings", "key")
+    # get a discord's api key from env
+    key = os.getenv("APIKEY")
     return key
 
 
