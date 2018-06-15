@@ -15,7 +15,7 @@ async def on_ready():
     print('------')
     send_message = "ゴーヤちゃん準備完了でち"
     channel = discord.utils.get(
-        goya_bot.get_all_channels(), name='goya_bot-echo')
+        goya_bot.get_all_channels(), name='bot-echo')
     await goya_bot.send_message(channel, send_message)
 
 
