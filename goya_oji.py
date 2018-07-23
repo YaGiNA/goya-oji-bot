@@ -21,7 +21,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     # send a response when goya-oji appears
-    regex_oji = u"ゴーヤちゃんいるかな(\?|？)?(\^|＾){2}"
+    regex_oji = u"(ゴーヤ|ごーや|ｺﾞｰﾔ)ちゃんいるかな(\?|？)?(\^|＾){2}"
     is_oji = re.search(regex_oji, message.content)
     if is_oji:
         # except client sender
